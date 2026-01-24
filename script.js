@@ -1,0 +1,569 @@
+/* // using `` backticks we can write multi line string and we can use string interpolation using ${}
+var n4 =`Hey Ayan khan !!!
+lets learn js `
+console.log(n4);
+console.log(typeof n4);
+
+var n5 =true
+console.log(n5); //true
+console.log(typeof n5);// boolean
+
+console.log(typeof typeof n5);//string
+
+var n6
+console.log(n6); // undefined
+
+console.log(typeof n6); // undefined
+
+var n7 =null
+console.log(n7)
+console.log(typeof n7);
+
+var n8=99999999999999999999999n
+console.log(n8);
+console.log(typeof n8);//big int
+
+var n9=Symbol("hello")
+var n10=Symbol("hello")
+console.log(n9);
+console.log(n10);
+
+console.log(n9==n10);
+console.log(n9===n10);
+
+var n11 =10
+var n12 ="10"
+console.log(n11==n12); //true (loosely comparision)
+console.log(n11===n12); //true (strictly comparision)
+
+          //! VAR, LET AND CONST DIFFERENCE
+// declare
+var a;  
+console.log(a);// undefined
+// initialize
+a=10;
+console.log(a);//10
+// declare & initialize
+var b=20;
+console.log(b);//20
+// redeclare
+var b;
+console.log(b);//20
+//re initialize
+b=30
+console.log(b);//30
+// re declare& re initialze
+var b=40
+console.log(b);//40
+
+         //! let  (it cant be redeclare and re-declare re-initialize)
+//declare
+let c;
+console.log(c);// undefined
+// initialze
+c=100
+console.log(c);//100
+// declare & Initialze
+let d=50
+console.log(d);
+
+// re initialze
+d=300
+console.log(d);//300
+
+         //! declare and initialize at the same time
+         
+const e=1000;
+console.log(e);//1000 */
+
+//! HOISTING :- Moving declaration part at the top of the original code internally
+
+// const z="========Hoisting Topic========"
+// console.log(z);
+
+// console.log(a); //undefined
+
+// var a=10
+// console.log(a); //10
+
+//! TDZ (TEmporal dead zone): the time period between accessing let and const variable before decalaration
+
+// console.log(b); //! error -> Can't access 'b' before initialization
+
+// let b=20
+// console.log(b); //20
+
+// // let c <------ hoisted but value will be unavailable
+// console.log(c); //! error -> Can't access 'c' before initialization
+
+// let c;
+// console.log(c);
+
+//            //! GEC(Global Execution Context)
+// debugger;
+// console.log("Start");
+// console.log(a);
+// var a=10;
+// console.log(a);
+// let b;
+// console.log(b);
+// b=20;
+// const c=100;
+// console.log(c);
+// console.log("End");
+
+//! Type of Variable And its scopes
+// 1. Global Variable
+
+// var a=10 // Global Scope <- Due to Hoisting
+// let b=20   // Script Scope <- Due to TDZ
+// const c=30  // Script Scope <- Due to TDZ
+
+// if(100>2){
+//     console.log(a,b,c);
+
+// }
+// for(let i=0;i<5;i++) {
+//     console.log(a,b,c);
+
+// }
+// function demo1(){
+//     console.log(a,b,c);
+
+// }
+// demo1();
+
+//! Local variable
+
+// if(100>2){
+//     var x=10;// Global variable :- Global Scope
+//     let y=20;// local varaible :- block scope
+//     const z=30;// local varaible :- block scope
+// }
+// console.log(x);//10
+// console.log(y);//! Reference Error : y is not defined
+// console.log(z);//! Reference Error : z is not defined
+
+//! Note : VAr variable is also known as function scope variable because it acts like local variable with in a function
+
+// function demo2(){
+//     var m=10; // Local variable -local scope
+//     let n=20; // Local variable -local scope
+//     const o=30; // Local variable -local scope
+// }
+// demo2();
+// console.log(m); //! Refernce error : m is not defined
+
+//! FUNCTIONS
+
+// function is used for code reusability
+
+//! 1) NAMED FFUNCTION : a function which has name
+
+//! Only named function can be befote the declaration due to funtion hoisting
+
+// greet()
+// function greet(){
+//             console.log("Welocme");
+//         }
+//    greet();
+// debugger
+// console.log("Start");
+// var a;
+// console.log(a);
+// fun();
+// a=10;
+// console.log(fun);
+// function fun(){
+//     var str ="HEllO"
+//     console.log(str);
+// }
+// console.log(fun);
+// fun();
+// console.log("END");
+
+// console.log("Start");
+// console.log(student);
+// var s1=100;
+// function student(){
+//     console.log("i am student");
+
+// }
+// console.log(trainer);
+// let s2 =200;
+// console.log(s2);
+// function trainer(){
+//     console.log("i am trainer");
+
+// }
+// student();
+// trainer();
+// console.log("end");
+
+//! 2) ANONYMOUS FUNCTION :- function without a name
+
+// function(){
+//     console.log("i'm anonymous function");
+
+// }
+
+//! 3) FUNCTION EXPRESSION :- it is used call or invoke anonymous function
+
+// console.log(f1); // undefined
+
+// var f1= function(){
+//     console.log("I'm Anonymous function called by using function expression");
+
+// };
+// console.log(f1); // it will print function with body
+// f1() // it will call the function
+
+//! 4) PARAMETRIZEED FUNCTION :- function with some parameter
+
+function sum(n1, n2) {
+  console.log(n1 + n2);
+}
+sum(10, 3);
+sum(10, "khan");
+sum(); //NaN(not a number) if we want zero at the place of NaN we need to declare the value of parameter with zero like (n1=0)
+
+function demo1(n1, n2, n3, n4, n5) {
+  console.log(n1, n2, n3, n4, n5);
+  console.log(arguments);
+}
+// demo1(10,20,30,40,50,60,70,80);
+// demo1(10,20,30,40,50);
+demo1(10, 20);
+
+// function printFullName(firstName,LastName,age){
+//      console.log(`My Name is ${firstName} ${LastName}`);
+//      console.log(`My Age is ${age}`);
+
+// }
+// let firstNameInput=prompt("Enter Your First Name");
+// let LastNameInput=prompt("Enter Your Last Name");
+// let ageInput=parseInt(prompt("Enter Your Age"));
+// printFullName(firstNameInput,LastNameInput,ageInput);
+
+//! 5) Return function
+
+function getEmail(fname, lname) {
+  let fullName = `${fname} ${lname}`;
+  let email = `${fname}${lname}@gmail.com`;
+  return [fullName, email];
+}
+let MyEmail = getEmail("Ayan", "Khan");
+// console.log(MyEmail);
+console.log(MyEmail[0]);
+console.log(MyEmail[1]);
+
+//! 6) NESTED FUNCTION
+
+function parents() {
+  console.log("I'm parent");
+
+  function child() {
+    console.log("I'm Child");
+  }
+  child();
+}
+
+parents();
+
+// ! 9) Immediatly invocked function epression(IIFE)
+
+let p = (function () {
+  console.log("This is IIFE function");
+  return "hii";
+})();
+console.log(p);
+
+//!
+
+// //! 1. Object literals
+// const obj1={
+//     id:1,
+//     fname:"Ayan"
+// };
+//    console.log(obj1);
+
+// //! 2. Object Constructor
+// const obj2=new Object({
+//     id:2,
+//     fname:"Ayankhan"
+
+// })
+// console.log(obj2);
+
+// //! 3. Constructor Function
+// function Student(id,firstName){
+//     this.id=id
+//     this.firstName=firstName;
+// }
+// let s1=new Student(1,"Ayan");
+// console.log(s1);
+// let s2=new Student(2,"Khan")
+// console.log(s2);
+
+// ! CRUD With object
+
+// 1.) Create
+
+// const obj={
+//     id:1,
+//     fname:"Ayan",
+//     Lname:"Khan",
+//     age:21,
+//     company:"NA"
+// };
+// console.log(obj);
+
+// // 2) read
+
+// //! there are two ways to read
+// // 1) using dot operator
+
+// console.log(obj.fname);
+
+// console.log(obj.loc); // undefined
+
+// // 2) using sqaure operator
+
+// console.log(obj["age"]);
+
+// // ! when we want access obj value using variable reference then we use square operator
+
+// let x = "id";
+// console.log(obj[x]);
+
+// //! if we want to apply loop on javascript then  we use for in loop
+
+// // for in loop
+// for ( let i in obj){
+//     console.log( i ,obj[i]);
+
+// };
+
+// // 3) update
+
+// obj.company = "tcs";
+// console.log(obj);
+
+// // 4) add new key
+// obj.salary = 50000;
+// console.log(obj);
+
+// //5) delete
+// delete obj.salary
+// console.log(obj);
+
+// //! object method
+
+// let obj = {
+//   id: 1,
+//   ename: "john",
+// };
+
+// //! 1)object.keys()
+// let keys = Object.keys(obj);
+// console.log(keys);
+
+// //! 2) object.values();
+// let values = Object.values(obj);
+// console.log(values);
+
+// //! 3) object.entries()
+// let keyAndValue = Object.entries(obj);
+// // console.log(obj);
+// console.log(keyAndValue); // [["id : 1"] , [ename : "john"]]
+
+// //! 4) object.fromentries()
+// let newObj = Object.fromEntries(keyAndValue);
+// console.log(newObj);
+// console.log(obj);
+
+// // ! OBject Destructuring
+
+// console.log("Object Destructuring");
+
+// let objt1 = {
+//   id: 1,
+//   // fName:"Ayan",
+//   lName: "Khan",
+// };
+
+// let { fName: firstname = "NA", lName, id, sal = 0 } = objt1;
+// console.log(firstname);
+// console.log(lName);
+// console.log(id);
+// console.log(sal);
+
+// if key is present in objt then we get undefined if we want to access that key
+// we can give default value to the key which is not present in object
+
+// let objt2 = {
+//   Id: 101,
+//   name: {
+//     fname: "Ayan",
+//     lname: "khan",
+//     age: 21,
+//   },
+//   hobbies: ["Coding", "Playing", "drawing"],
+//   address: {
+//     city: "Sultanpur",
+//     State: "UP",
+//     Pincode: 227808,
+//   },
+//   details: {
+//     id: "JaneQSP1",
+//     course: "FUllStack",
+//   },
+// };
+// id,firstname,coding,city,id,course
+
+// destructuring
+
+
+//! Array destructuring
+
+let arr = [10, 20, 30, 40, 50];
+let [, , n1, , n2] = arr;
+console.log(n1, n2);
+
+// Example
+
+// const user = {
+//   id: 1,
+//   name: "Leanne Graham",
+//   username: "Bret",
+//   email: "Sincere@april.biz",
+//   address: {
+//     street: "Kulas Light",
+//     suite: "Apt. 556",
+//     city: "Gwenborough",
+//     zipcode: "92998-3874",
+//     geo: {
+//       lat: "-37.3159",
+//       lng: "81.1496",
+//     },
+//   },
+//   phone: "1-770-736-8031 x56442",
+//   website: "hildegard.org",
+//   company: {
+//     name: "Romaguera-Crona",
+//     catchPhrase: "Multi-layered client-server neural-net",
+//     bs: "harness real-time e-markets",
+//   },
+// };
+
+//  name,username,street, zzipcode,lat, lng,companyname
+
+// let {
+//   name,
+//   username,
+//   address: {
+//     street,
+//     zipcode,
+//     geo: { lat, lng },
+//   },
+//   company: { name: companyName },
+// } = user;
+// console.log("=========Example===========");
+
+// console.log(name);
+// console.log(username);
+// console.log(street);
+// console.log(zipcode);
+// console.log(lat);
+// console.log(lng);
+// console.log(companyName);
+
+
+//! -----this keyword---------
+
+console.log(window);
+console.log(this);
+
+// ! How to create your own method 
+// ! Note:- Don't use arrow function to create method because "THIS " keywords refers to window object
+// ! If the function is stored in object object then it is called an method
+
+
+
+// let student={
+//   id:1,
+//   fname:"Ayan",
+//   lname:"Khan",
+//   getFullName:function(){
+//     console.log(`${this.fname} ${this.lname}`);
+    
+//   },
+//   getEmail(){
+//     console.log(`${this.fname}.${this.lname}@gmail.com`);
+    
+//   },
+// };
+// console.log();
+// student.getFullName();
+// student.getEmail();
+
+// ! call() , apply() and bind()
+
+function getFUllName(){
+    return `${this.firstName} ${this.lastName}`
+}
+function courseDetails(sub1, sub2){
+  return `${this.course} include ${sub1} ${sub2}`
+}
+
+let user1={
+  id:1,
+  firstName:"Ayan",
+  lastName:"Khan",
+  course:"frontend",  
+};
+
+let user2={
+  id:2,
+  firstName:"Shahan",
+  lastName:"Khan",
+  course:"Full Stack",
+};
+
+
+// ! call() 
+// ----- Calling User1-----
+let fullName1=getFUllName.call(user1);
+console.log(fullName1);
+
+// ----- Calling User2-----
+let fullName2=getFUllName.call(user2);
+console.log(fullName2);
+
+let courseFullDetails= courseDetails.call(user1,"JS","NodeJS")
+console.log(courseFullDetails);
+
+
+
+// ! Apply()   Immmediately call the function
+let fullName3=getFUllName.apply(user2);
+console.log(fullName3);
+
+let coursedetails2=courseDetails.apply(user1,["JAVA","SPRINGBOOT"])
+console.log(coursedetails2);
+
+// ! Bind()   return bounded function whicch czn be call later on
+
+let boundedGetFullName=getFUllName.bind(user1);
+console.log(boundedGetFullName);
+
+let boundedCourseDetails=courseDetails.bind(user1)
+console.log(boundedCourseDetails("HTML","CSS"));
+
+
+
+
+
+
+
+
