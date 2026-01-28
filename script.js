@@ -509,56 +509,211 @@ console.log(this);
 
 // ! call() , apply() and bind()
 
-function getFUllName(){
-    return `${this.firstName} ${this.lastName}`
-}
-function courseDetails(sub1, sub2){
-  return `${this.course} include ${sub1} ${sub2}`
-}
+// function getFUllName(){
+//     return `${this.firstName} ${this.lastName}`
+// }
+// function courseDetails(sub1, sub2){
+//   return `${this.course} include ${sub1} ${sub2}`
+// }
 
-let user1={
-  id:1,
-  firstName:"Ayan",
-  lastName:"Khan",
-  course:"frontend",  
-};
+// let user1={
+//   id:1,
+//   firstName:"Ayan",
+//   lastName:"Khan",
+//   course:"frontend",  
+// };
 
-let user2={
-  id:2,
-  firstName:"Shahan",
-  lastName:"Khan",
-  course:"Full Stack",
-};
-
-
-// ! call() 
-// ----- Calling User1-----
-let fullName1=getFUllName.call(user1);
-console.log(fullName1);
-
-// ----- Calling User2-----
-let fullName2=getFUllName.call(user2);
-console.log(fullName2);
-
-let courseFullDetails= courseDetails.call(user1,"JS","NodeJS")
-console.log(courseFullDetails);
+// let user2={
+//   id:2,
+//   firstName:"Shahan",
+//   lastName:"Khan",
+//   course:"Full Stack",
+// };
 
 
+// // ! call() 
+// // ----- Calling User1-----
+// let fullName1=getFUllName.call(user1);
+// console.log(fullName1);
 
-// ! Apply()   Immmediately call the function
-let fullName3=getFUllName.apply(user2);
-console.log(fullName3);
+// // ----- Calling User2-----
+// let fullName2=getFUllName.call(user2);
+// console.log(fullName2);
 
-let coursedetails2=courseDetails.apply(user1,["JAVA","SPRINGBOOT"])
-console.log(coursedetails2);
+// let courseFullDetails= courseDetails.call(user1,"JS","NodeJS")
+// console.log(courseFullDetails);
 
-// ! Bind()   return bounded function whicch czn be call later on
 
-let boundedGetFullName=getFUllName.bind(user1);
-console.log(boundedGetFullName);
 
-let boundedCourseDetails=courseDetails.bind(user1)
-console.log(boundedCourseDetails("HTML","CSS"));
+// // ! Apply()   Immmediately call the function
+// let fullName3=getFUllName.apply(user2);
+// console.log(fullName3);
+
+// let coursedetails2=courseDetails.apply(user1,["JAVA","SPRINGBOOT"])
+// console.log(coursedetails2);
+
+// // ! Bind()   return bounded function whicch czn be call later on
+
+// let boundedGetFullName=getFUllName.bind(user1);
+// console.log(boundedGetFullName);
+
+// let boundedCourseDetails=courseDetails.bind(user1)
+// console.log(boundedCourseDetails("HTML","CSS"));
+
+
+
+// ! Json
+
+// let user1={
+//   id:1,
+//   fname:"Ayan",
+//   lname:"Khan",
+// };
+
+// function storeDataInLocalStorage(){
+//   let jsonData=JSON.stringify(user1);// js to json
+// }
+
+// function getDataFromLocalStorage(){
+//   let data=localStorage.getItem("UserData");
+//   let userObject =JSON.parse(data);// json to js
+//   console.log(userObject);
+//   document.writeln(`<em>${userObject.fname}</em>`)
+  
+// }
+
+// function removeSingleDataFromLocalStorage(){
+//   localStorage.removeItem("Demo1")
+// }
+
+// function clearDataFromLocalStorage(){
+//   localStorage.clear();
+// }
+
+
+// ! ===============ARRAYS==================
+// // Arrays are hetrogenous in nature
+
+// // 1) Array literals
+// let arr1=[10,true,"Ayan",()=>{},null,1n,undefined];// Multiple data can be define in array
+// console.log(arr1);
+
+
+// // 2) Array constructor
+// let arr2=new Array(10,false,"bye",function(){});
+// console.log(arr2);
+
+// // ! Array methods
+// let arr1=[10,20,30];
+// console.log(arr1);[10, 20, 30]
+
+// //! array.push() : Appends new element to the end of an array and returns the new length of the array.
+
+// let newLength =arr1.push(50,60,70);
+// console.log(arr1);  // [10, 20, 30, 50, 60, 70]
+// console.log(newLength); //6 <---new length of array
+
+// // ! array.pop() : Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+// let returnVal= arr1.pop();
+// console.log(arr1);// [10, 20, 30, 50, 60]
+// console.log(returnVal); // 70
+
+// // ! array.unShift() : Inserts new elements at the start of an array, and returns the new length of the array.
+// arr1.unshift("Ayan",100);
+// console.log(arr1); //['Ayan', 100, 10, 20, 30, 50, 60]
+// console.log(arr1.length); // 7
+
+
+// // ! array.shift() :Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+
+// arr1.shift()
+// console.log(arr1); //[100, 10, 20, 30, 50, 60]
+// console.log(arr1.length); // 7
+
+
+// // ! splice() method : It is the method of adding new element wherever we want  
+//                     //  ! it modify in orginal array
+// // splice(StartIndex , DeleteCount , newElement) 
+
+
+// let arr2=[10,20,30,40,50];
+// console.log(arr2); //[10,20,30,40,50]
+// //  ! Adding new element
+
+// arr2.splice(3,0,35)
+// console.log(arr2); //[10,20,30,35,40,50]
+
+// arr2.splice(4,0,45,47,49)
+// console.log(arr2);
+
+// // ! Deleting element
+
+// arr2.splice(3,4); /* start  index means from where you want to start and
+//                    delete count means how many number you want to delete in a row  */
+// console.log(arr2); //[10,20,30,40,50]
+
+// // ! Delete and adding multiple element at a time
+
+// let arr3=[100,200,300,400,500];
+// console.log(arr3); //[100,200,300,400,500]
+
+// arr3.splice(2,2,250,270,290)
+// console.log(arr3);
+
+
+// // ! Slice(startIndex, endIndex) : 
+// /*it returns new array 
+//   it returns the value between startindex and endIndex
+//  and it ignores the last index return the value just before end index */
+
+// let arr4=[5,6,7,8,15,25,35,45,55]
+// console.log(arr4);//[5,15,25,35,45,55]
+
+// let newArr=arr4.slice(1,3)
+// console.log(newArr); //[6,7]
+// console.log(arr4);   //[5,6,7,8,15,25,35,45,55]
+
+// /*    -6,-5,-4,-3,-2,-1
+//  arr=[10,20,30,40,50,60]
+//         0 ,1 ,2 ,3, 4 ,5   */
+
+// let newArr2=arr4.slice(1,-1);
+// console.log(newArr2); //[6, 7, 8, 15, 25, 35, 45]
+
+// let newArr3=arr4.slice(2);
+// console.log(newArr3); //[7, 8, 15, 25, 35, 45, 55]
+
+
+
+
+// ! Sort() 
+// it is use to sort the array
+
+let arr5=[1,7,4,0,5,6,3,8,9,2];
+arr5.sort(); //ASC
+console.log(arr5); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+let arr6=[80,883,38,47,92,9,1]
+console.log(arr6);// [80, 883, 38, 47, 92, 9, 1]
+
+arr6.sort((a,b) => a-b)
+console.log(arr6); //[1, 9, 38, 47, 80, 92, 883]
+
+
+
+// ! concat() : adding two or more element 
+
+let arr9=[10,20,30] //[[10,20,30] ]
+let arr10=[40,50,60] //[[40,50,60]]
+
+let newConcatArr=arr9.concat(arr10)
+console.log(newConcatArr);  //[10, 20, 30, 40, 50, 60]
+
+
+
+
+
+
 
 
 
