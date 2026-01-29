@@ -711,75 +711,100 @@ console.log(this);
 
 
 
-// !=============== ADVANCE ARRAY METHOD==================
+// // !=============== ADVANCE ARRAY METHOD==================
 
-// ! forEach(callbckFunc)
-console.log("=========forEach==========");
+// // ! forEach(callbckFunc)
+// console.log("=========forEach==========");
 
-// used to iterate an array, returns undefined 
-// for each me value return nhi hoti h
+// // used to iterate an array, returns undefined 
+// // for each me value return nhi hoti h
 
-let arr1=[10,20,30,40,50]
-let returnval1=arr1.forEach((Element, index, array)=>{
-  console.log(Element, index, array);
-  return Element+5;
-})
-console.log(returnval1); // undefined
+// let arr1=[10,20,30,40,50]
+// let returnval1=arr1.forEach((Element, index, array)=>{
+//   console.log(Element, index, array);
+//   return Element+5;
+// })
+// console.log(returnval1); // undefined
 
 
-// ! map(callbackFunc) 
-console.log("=============MAP=========");
-// Used to iterate any array returns a new array
+// // ! map(callbackFunc) 
+// console.log("=============MAP=========");
+// // Used to iterate any array returns a new array
 
-let returnVal2=arr1.map((Element, index, array)=>{
-  console.log(Element, index, array);
-  return Element+5;
-})
-console.log(returnVal2); // [15, 25, 35, 45, 55]
+// let returnVal2=arr1.map((Element, index, array)=>{
+//   console.log(Element, index, array);
+//   return Element+5;
+// })
+// console.log(returnVal2); // [15, 25, 35, 45, 55]
 
-// ! filter(callbackFunc)
-console.log("=========filter===========");
+// // ! filter(callbackFunc)
+// console.log("=========filter===========");
 
-/* 
-map aur filter me ye difference h ki map true false me return krta h
-jb ki filter value provide krta h 
-*/
- let arr2=[100,200,300,400,500]
- let returnVal3=arr2.filter((ele, ind, array)=>ele>200);
- console.log(returnVal3);//[300,400,500]
+// /* 
+// map aur filter me ye difference h ki map true false me return krta h
+// jb ki filter value provide krta h 
+// */
+//  let arr2=[100,200,300,400,500]
+//  let returnVal3=arr2.filter((ele, ind, array)=>ele>200);
+//  console.log(returnVal3);//[300,400,500]
  
-// ! find(callbackFunc)
-console.log("==========find=============");
-/**
- * it is used find the single element 
- * filter aur find me ye differnece h ki filter kayi value ko return krta h 
- * aur find single value ko return krta h
- */
+// // ! find(callbackFunc)
+// console.log("==========find=============");
+// /**
+//  * it is used find the single element 
+//  * filter aur find me ye differnece h ki filter kayi value ko return krta h 
+//  * aur find single value ko return krta h
+//  */
 
-let returnVal4=arr2.find((ele, idx, array) => ele > 200);
-console.log(returnVal4);
-
-
-// ! findIndex(callbackFunc)
-console.log("==============findindex===========");
-let returnVal5=arr2.findIndex((ele, idx, array) => ele > 200);
-console.log(returnVal5);
-
-// ! reduce(callbackFunc)
-console.log("==========reduceFunction===========");
-
-let arr4=[10,20,30,40,50];
-let sumVal=arr4.reduce((acc,ele)=>{
-console.log(acc,ele);
-
-  return acc+ele;
-},0);
-
-console.log(sumVal); //150
+// let returnVal4=arr2.find((ele, idx, array) => ele > 200);
+// console.log(returnVal4);
 
 
+// // ! findIndex(callbackFunc)
+// console.log("==============findindex===========");
+// let returnVal5=arr2.findIndex((ele, idx, array) => ele > 200);
+// console.log(returnVal5);
 
+// // ! reduce(callbackFunc)
+// console.log("==========reduceFunction===========");
 
+// let arr4=[10,20,30,40,50];
+// let sumVal=arr4.reduce((acc,ele)=>{
+// console.log(acc,ele);
+
+//   return acc+ele;
+// },0);
+
+// console.log(sumVal); //150
+
+// ! toString()
+console.log("============toString============");
+
+let arr1=[1,2,3,4,5]
+
+let str1=arr.toString()
+console.log(str1); // 10,20,30,40,50
+
+// ! join()
+console.log("===========join================");
+
+let str2=arr.join(" ")
+console.log(str2); //10 20 30 40 50
+
+//  ! split()
+console.log("=============split=========");
+
+let str ="AYANKHAN"
+console.log(str.split(""));
+
+// Example
+
+function pallindrome(word){
+  let output=word.split("").reverse().join("")
+  return output===word? true :false;
+}
+console.log(pallindrome("abc"));
+console.log(pallindrome("racecar"));
 
 
 
