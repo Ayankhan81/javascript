@@ -686,33 +686,96 @@ console.log(this);
 
 
 
-// ! Sort() 
-// it is use to sort the array
+// // ! Sort() 
+// // it is use to sort the array
 
-let arr5=[1,7,4,0,5,6,3,8,9,2];
-arr5.sort(); //ASC
-console.log(arr5); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+// let arr5=[1,7,4,0,5,6,3,8,9,2];
+// arr5.sort(); //ASC
+// console.log(arr5); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-let arr6=[80,883,38,47,92,9,1]
-console.log(arr6);// [80, 883, 38, 47, 92, 9, 1]
+// let arr6=[80,883,38,47,92,9,1]
+// console.log(arr6);// [80, 883, 38, 47, 92, 9, 1]
 
-arr6.sort((a,b) => a-b)
-console.log(arr6); //[1, 9, 38, 47, 80, 92, 883]
-
-
-
-// ! concat() : adding two or more element 
-
-let arr9=[10,20,30] //[[10,20,30] ]
-let arr10=[40,50,60] //[[40,50,60]]
-
-let newConcatArr=arr9.concat(arr10)
-console.log(newConcatArr);  //[10, 20, 30, 40, 50, 60]
+// arr6.sort((a,b) => a-b)
+// console.log(arr6); //[1, 9, 38, 47, 80, 92, 883]
 
 
 
+// // ! concat() : adding two or more element 
+
+// let arr9=[10,20,30] //[[10,20,30] ]
+// let arr10=[40,50,60] //[[40,50,60]]
+
+// let newConcatArr=arr9.concat(arr10)
+// console.log(newConcatArr);  //[10, 20, 30, 40, 50, 60]
 
 
+
+// !=============== ADVANCE ARRAY METHOD==================
+
+// ! forEach(callbckFunc)
+console.log("=========forEach==========");
+
+// used to iterate an array, returns undefined 
+// for each me value return nhi hoti h
+
+let arr1=[10,20,30,40,50]
+let returnval1=arr1.forEach((Element, index, array)=>{
+  console.log(Element, index, array);
+  return Element+5;
+})
+console.log(returnval1); // undefined
+
+
+// ! map(callbackFunc) 
+console.log("=============MAP=========");
+// Used to iterate any array returns a new array
+
+let returnVal2=arr1.map((Element, index, array)=>{
+  console.log(Element, index, array);
+  return Element+5;
+})
+console.log(returnVal2); // [15, 25, 35, 45, 55]
+
+// ! filter(callbackFunc)
+console.log("=========filter===========");
+
+/* 
+map aur filter me ye difference h ki map true false me return krta h
+jb ki filter value provide krta h 
+*/
+ let arr2=[100,200,300,400,500]
+ let returnVal3=arr2.filter((ele, ind, array)=>ele>200);
+ console.log(returnVal3);//[300,400,500]
+ 
+// ! find(callbackFunc)
+console.log("==========find=============");
+/**
+ * it is used find the single element 
+ * filter aur find me ye differnece h ki filter kayi value ko return krta h 
+ * aur find single value ko return krta h
+ */
+
+let returnVal4=arr2.find((ele, idx, array) => ele > 200);
+console.log(returnVal4);
+
+
+// ! findIndex(callbackFunc)
+console.log("==============findindex===========");
+let returnVal5=arr2.findIndex((ele, idx, array) => ele > 200);
+console.log(returnVal5);
+
+// ! reduce(callbackFunc)
+console.log("==========reduceFunction===========");
+
+let arr4=[10,20,30,40,50];
+let sumVal=arr4.reduce((acc,ele)=>{
+console.log(acc,ele);
+
+  return acc+ele;
+},0);
+
+console.log(sumVal); //150
 
 
 
