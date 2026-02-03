@@ -220,17 +220,17 @@ console.log(e);//1000 */
 
 //! 4) PARAMETRIZEED FUNCTION :- function with some parameter
 
-function sum(n1, n2) {
-  console.log(n1 + n2);
-}
-sum(10, 3);
-sum(10, "khan");
-sum(); //NaN(not a number) if we want zero at the place of NaN we need to declare the value of parameter with zero like (n1=0)
+// function sum(n1, n2) {
+//   console.log(n1 + n2);
+// }
+// sum(10, 3);
+// sum(10, "khan");
+// sum(); //NaN(not a number) if we want zero at the place of NaN we need to declare the value of parameter with zero like (n1=0)
 
-function demo1(n1, n2, n3, n4, n5) {
-  console.log(n1, n2, n3, n4, n5);
-  console.log(arguments);
-}
+// function demo1(n1, n2, n3, n4, n5) {
+//   console.log(n1, n2, n3, n4, n5);
+//   console.log(arguments);
+// }
 // demo1(10,20,30,40,50,60,70,80);
 // demo1(10,20,30,40,50);
 demo1(10, 20);
@@ -247,26 +247,26 @@ demo1(10, 20);
 
 //! 5) Return function
 
-function getEmail(fname, lname) {
-  let fullName = `${fname} ${lname}`;
-  let email = `${fname}${lname}@gmail.com`;
-  return [fullName, email];
-}
-let MyEmail = getEmail("Ayan", "Khan");
-// console.log(MyEmail);
-console.log(MyEmail[0]);
-console.log(MyEmail[1]);
+// function getEmail(fname, lname) {
+//   let fullName = `${fname} ${lname}`;
+//   let email = `${fname}${lname}@gmail.com`;
+//   return [fullName, email];
+// }
+// let MyEmail = getEmail("Ayan", "Khan");
+// // console.log(MyEmail);
+// console.log(MyEmail[0]);
+// console.log(MyEmail[1]);
 
-//! 6) NESTED FUNCTION
+// //! 6) NESTED FUNCTION
 
-function parents() {
-  console.log("I'm parent");
+// function parents() {
+//   console.log("I'm parent");
 
-  function child() {
-    console.log("I'm Child");
-  }
-  child();
-}
+//   function child() {
+//     console.log("I'm Child");
+//   }
+//   child();
+// }
 
 parents();
 
@@ -425,9 +425,9 @@ console.log(p);
 
 //! Array destructuring
 
-let arr = [10, 20, 30, 40, 50];
-let [, , n1, , n2] = arr;
-console.log(n1, n2);
+// let arr = [10, 20, 30, 40, 50];
+// let [, , n1, , n2] = arr;
+// console.log(n1, n2);
 
 // Example
 
@@ -479,8 +479,8 @@ console.log(n1, n2);
 
 //! -----this keyword---------
 
-console.log(window);
-console.log(this);
+// console.log(window);
+// console.log(this);
 
 // ! How to create your own method
 // ! Note:- Don't use arrow function to create method because "THIS " keywords refers to window object
@@ -844,9 +844,28 @@ async function getTodos(url) {
   try {
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
+    console.log(data); // {todos: Array(30), total: 254, skip: 0, limit: 30}
+
+    displayTodos(data.todos); //Array(30)
   } catch (err) {
     console.log(err);
   }
 }
-getTodos(API_url)
+getTodos(API_url);
+
+function displayTodos(allTodos) {
+  console.log(allTodos);
+  allTodos.map((ele) => {
+    // console.log(ele);
+    let { id, userId, todo, completed } = ele;
+
+    document.writeln(`
+        <div class="todo">
+            <h4>
+                ${todo}
+            </h4>
+            <span>${completed ? 'Completed' : 'Pending'}</span>
+        </div>
+        `);
+  });
+}
