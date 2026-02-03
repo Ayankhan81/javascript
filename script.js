@@ -423,7 +423,6 @@ console.log(p);
 
 // destructuring
 
-
 //! Array destructuring
 
 let arr = [10, 20, 30, 40, 50];
@@ -478,17 +477,14 @@ console.log(n1, n2);
 // console.log(lng);
 // console.log(companyName);
 
-
 //! -----this keyword---------
 
 console.log(window);
 console.log(this);
 
-// ! How to create your own method 
+// ! How to create your own method
 // ! Note:- Don't use arrow function to create method because "THIS " keywords refers to window object
 // ! If the function is stored in object object then it is called an method
-
-
 
 // let student={
 //   id:1,
@@ -496,11 +492,11 @@ console.log(this);
 //   lname:"Khan",
 //   getFullName:function(){
 //     console.log(`${this.fname} ${this.lname}`);
-    
+
 //   },
 //   getEmail(){
 //     console.log(`${this.fname}.${this.lname}@gmail.com`);
-    
+
 //   },
 // };
 // console.log();
@@ -520,7 +516,7 @@ console.log(this);
 //   id:1,
 //   firstName:"Ayan",
 //   lastName:"Khan",
-//   course:"frontend",  
+//   course:"frontend",
 // };
 
 // let user2={
@@ -530,8 +526,7 @@ console.log(this);
 //   course:"Full Stack",
 // };
 
-
-// // ! call() 
+// // ! call()
 // // ----- Calling User1-----
 // let fullName1=getFUllName.call(user1);
 // console.log(fullName1);
@@ -542,8 +537,6 @@ console.log(this);
 
 // let courseFullDetails= courseDetails.call(user1,"JS","NodeJS")
 // console.log(courseFullDetails);
-
-
 
 // // ! Apply()   Immmediately call the function
 // let fullName3=getFUllName.apply(user2);
@@ -559,8 +552,6 @@ console.log(this);
 
 // let boundedCourseDetails=courseDetails.bind(user1)
 // console.log(boundedCourseDetails("HTML","CSS"));
-
-
 
 // ! Json
 
@@ -579,7 +570,7 @@ console.log(this);
 //   let userObject =JSON.parse(data);// json to js
 //   console.log(userObject);
 //   document.writeln(`<em>${userObject.fname}</em>`)
-  
+
 // }
 
 // function removeSingleDataFromLocalStorage(){
@@ -590,14 +581,12 @@ console.log(this);
 //   localStorage.clear();
 // }
 
-
 // ! ===============ARRAYS==================
 // // Arrays are hetrogenous in nature
 
 // // 1) Array literals
 // let arr1=[10,true,"Ayan",()=>{},null,1n,undefined];// Multiple data can be define in array
 // console.log(arr1);
-
 
 // // 2) Array constructor
 // let arr2=new Array(10,false,"bye",function(){});
@@ -623,18 +612,15 @@ console.log(this);
 // console.log(arr1); //['Ayan', 100, 10, 20, 30, 50, 60]
 // console.log(arr1.length); // 7
 
-
 // // ! array.shift() :Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
 
 // arr1.shift()
 // console.log(arr1); //[100, 10, 20, 30, 50, 60]
 // console.log(arr1.length); // 7
 
-
-// // ! splice() method : It is the method of adding new element wherever we want  
+// // ! splice() method : It is the method of adding new element wherever we want
 //                     //  ! it modify in orginal array
-// // splice(StartIndex , DeleteCount , newElement) 
-
+// // splice(StartIndex , DeleteCount , newElement)
 
 // let arr2=[10,20,30,40,50];
 // console.log(arr2); //[10,20,30,40,50]
@@ -660,9 +646,8 @@ console.log(this);
 // arr3.splice(2,2,250,270,290)
 // console.log(arr3);
 
-
-// // ! Slice(startIndex, endIndex) : 
-// /*it returns new array 
+// // ! Slice(startIndex, endIndex) :
+// /*it returns new array
 //   it returns the value between startindex and endIndex
 //  and it ignores the last index return the value just before end index */
 
@@ -683,10 +668,7 @@ console.log(this);
 // let newArr3=arr4.slice(2);
 // console.log(newArr3); //[7, 8, 15, 25, 35, 45, 55]
 
-
-
-
-// // ! Sort() 
+// // ! Sort()
 // // it is use to sort the array
 
 // let arr5=[1,7,4,0,5,6,3,8,9,2];
@@ -699,9 +681,7 @@ console.log(this);
 // arr6.sort((a,b) => a-b)
 // console.log(arr6); //[1, 9, 38, 47, 80, 92, 883]
 
-
-
-// // ! concat() : adding two or more element 
+// // ! concat() : adding two or more element
 
 // let arr9=[10,20,30] //[[10,20,30] ]
 // let arr10=[40,50,60] //[[40,50,60]]
@@ -709,14 +689,12 @@ console.log(this);
 // let newConcatArr=arr9.concat(arr10)
 // console.log(newConcatArr);  //[10, 20, 30, 40, 50, 60]
 
-
-
 // // !=============== ADVANCE ARRAY METHOD==================
 
 // // ! forEach(callbckFunc)
 // console.log("=========forEach==========");
 
-// // used to iterate an array, returns undefined 
+// // used to iterate an array, returns undefined
 // // for each me value return nhi hoti h
 
 // let arr1=[10,20,30,40,50]
@@ -726,8 +704,7 @@ console.log(this);
 // })
 // console.log(returnval1); // undefined
 
-
-// // ! map(callbackFunc) 
+// // ! map(callbackFunc)
 // console.log("=============MAP=========");
 // // Used to iterate any array returns a new array
 
@@ -740,25 +717,24 @@ console.log(this);
 // // ! filter(callbackFunc)
 // console.log("=========filter===========");
 
-// /* 
+// /*
 // map aur filter me ye difference h ki map true false me return krta h
-// jb ki filter value provide krta h 
+// jb ki filter value provide krta h
 // */
 //  let arr2=[100,200,300,400,500]
 //  let returnVal3=arr2.filter((ele, ind, array)=>ele>200);
 //  console.log(returnVal3);//[300,400,500]
- 
+
 // // ! find(callbackFunc)
 // console.log("==========find=============");
 // /**
-//  * it is used find the single element 
-//  * filter aur find me ye differnece h ki filter kayi value ko return krta h 
+//  * it is used find the single element
+//  * filter aur find me ye differnece h ki filter kayi value ko return krta h
 //  * aur find single value ko return krta h
 //  */
 
 // let returnVal4=arr2.find((ele, idx, array) => ele > 200);
 // console.log(returnVal4);
-
 
 // // ! findIndex(callbackFunc)
 // console.log("==============findindex===========");
@@ -777,36 +753,100 @@ console.log(this);
 
 // console.log(sumVal); //150
 
-// ! toString()
-console.log("============toString============");
+// // ! toString()
+// console.log("============toString============");
 
-let arr1=[1,2,3,4,5]
+// let arr1=[1,2,3,4,5]
 
-let str1=arr.toString()
-console.log(str1); // 10,20,30,40,50
+// let str1=arr.toString()
+// console.log(str1); // 10,20,30,40,50
 
-// ! join()
-console.log("===========join================");
+// // ! join()
+// console.log("===========join================");
 
-let str2=arr.join(" ")
-console.log(str2); //10 20 30 40 50
+// let str2=arr.join(" ")
+// console.log(str2); //10 20 30 40 50
 
-//  ! split()
-console.log("=============split=========");
+// //  ! split()
+// console.log("=============split=========");
 
-let str ="AYANKHAN"
-console.log(str.split(""));
+// let str ="AYANKHAN"
+// console.log(str.split(""));
 
-// Example
+// // Example
 
-function pallindrome(word){
-  let output=word.split("").reverse().join("")
-  return output===word? true :false;
+// function pallindrome(word){
+//   let output=word.split("").reverse().join("")
+//   return output===word? true :false;
+// }
+// console.log(pallindrome("abc"));
+// console.log(pallindrome("racecar"));
+
+// ! ==========03/02/2026==========
+
+console.log("===========Promises================");
+
+//! Promises:- it is object it has three state
+// then catch finally is used in promises
+
+// const p1=new Promise((resolve, reject)=>{
+// if(10>2){
+//   resolve("Hello World");
+// }
+// else{
+//   reject("Bye Bye");
+// }
+// })
+// console.log(p1);
+
+// p1.then((data)=>{
+//   document.writeln(`<h1>${data}</h1>`)
+// });
+
+// p1.catch((err)=>{
+//   document.writeln(`<h1>${err}</h1>`)
+// });
+
+// p1.finally(()=>{
+//   console.log("I'm Finally Block");
+
+// })
+
+// ! Promises With then, catch, and Finally
+
+// const API_url = "https://dummyjson.com/todos";
+
+// let p1 = fetch(API_url);
+// console.log(p1);
+
+// p1.then((response) => {
+//   let p2 = response.json();
+//   console.log(p2);
+
+//   p2.then((data) => {
+//     console.log(data.todos);
+//   });
+
+//   p2.catch((err) => {
+//     console.log(err);
+//   });
+// });
+
+// p1.catch((err) => {
+//   console.log(err);
+// });
+
+// ! Promise with ASYNC and AWAIT
+
+const API_url = "https://dummyjson.com/todos";
+
+async function getTodos(url) {
+  try {
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
 }
-console.log(pallindrome("abc"));
-console.log(pallindrome("racecar"));
-
-
-
-
-
+getTodos(API_url)
