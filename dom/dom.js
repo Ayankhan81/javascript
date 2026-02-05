@@ -118,6 +118,7 @@ const tdTag4=document.createElement("td")
 const tdTag5=document.createElement("td")
 const tdTag6=document.createElement("td")
 
+
 tableTag.border="1"
 tableTag.cellSpacing ="0"
 tableTag.cellpadding ="5"
@@ -142,6 +143,5 @@ trTag3.append(tdTag4,tdTag5,tdTag6);
 tableTag.append(trTag1,trTag2,trTag3)
 
 console.log(tableTag);
-
 
 mainContainer.append(tableTag)
