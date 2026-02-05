@@ -100,17 +100,17 @@ console.log(e);//1000 */
 // console.log(c);
 
 //    ! Using early return
-function getGrade(score) {
-  if (score < 0 || score > 100) return "Enter Valid Score";
-  else if (score < 33) return "Fail";
-  else if (score < 60) return "D";
-  else if (score < 70) return "C";
-  else if (score < 80) return "B";
-  else if (score < 90) return "A";
-  else if (score <= 100) return "A+";
-}
+// function getGrade(score) {
+//   if (score < 0 || score > 100) return "Enter Valid Score";
+//   else if (score < 33) return "Fail";
+//   else if (score < 60) return "D";
+//   else if (score < 70) return "C";
+//   else if (score < 80) return "B";
+//   else if (score < 90) return "A";
+//   else if (score <= 100) return "A+";
+// }
 
-console.log(getGrade(100));
+// console.log(getGrade(100));
 
 //            //! GEC(Global Execution Context)
 // debugger;
