@@ -178,6 +178,53 @@ for (let i = 1; i <= 10; i++) {
   console.log(`5* ${i}=`, 5 * i);
 }
 
+
+// Print the sum of number from 1 to 100 using a loop.
+
+console.log("======question 6=====");
+
+let sumCount = 0;
+
+for (let i = 1; i <= 100; i++) {
+  sumCount += i;
+}
+console.log(sumCount);
+
+// Print all number between 1 to 50 that are divided by 3
+
+console.log("======question 7======");
+
+for (let i = 1; i <= 50; i++) {
+  if (i % 3 === 0) {
+    console.log(i);
+  }
+}
+
+// Ask the user for a number and print whether each number from 1 to that number is even or odd
+// console.log("======QUestion 8=======");
+
+// let userNum = prompt("Enter Any Number");
+
+// for (let i = 1; i <= userNum; i++) {
+//   if (i % 2 === 0) {
+//     console.log("Even Number", i);
+//   } else {
+//     console.log("Odd Number", i);
+//   }
+// }
+
+// Count How many number between 1 to 100 are divisible by both 3 & 5
+console.log("======Question 9======");
+let countNum =0;
+for(let i=1;i<=100;i++){
+    if(i%3===0 && i%5===0){
+        console.log(i);
+        countNum++;
+    }
+    
+}
+console.log("Total Number is :",countNum);
+
 //            //! GEC(Global Execution Context)
 // debugger;
 // console.log("Start");
