@@ -225,6 +225,86 @@ for(let i=1;i<=100;i++){
 }
 console.log("Total Number is :",countNum);
 
+//Q1  stop at first multiple of 7
+
+/**
+ write a loop from 1 to 100 that:
+
+     print each number
+     stops completely when it find the first number divisible by 7
+
+ */
+// it will Stop when it get 1 multiple of 7
+let countFirstMul=1;
+for (let i = 1; i <= 100; i++) {
+  if (i % 7 === 0) {
+      console.log(i);
+      if (countFirstMul === 1) {
+          break;
+    }
+    countFirstMul++;
+    }
+}
+console.log("Stops when reahed to the first multiple of 7");
+
+for(let i=1;i<=100;i++){
+    console.log(i);
+    if(i % 7===0){
+        break;
+    }
+    
+}
+// Q2 Skip Multiply of 3
+/**
+ write a loop from 1 to 20 that:
+     skip number divisible by 3
+     print all others
+
+
+     use continue
+
+     expected output :
+
+     1 2 4 5 7 8 10 .........no 3,6,9 ......
+ */
+console.log("=======Skip Multiply of 3");
+
+     for(let i=1; i<=20;i++){
+        if(i%3===0){
+            continue;
+        }
+        console.log(i);
+        
+     }
+
+/**
+ Q5 Print first 5 odd Number only
+
+ write a loop from 1 to 100 that:
+     Print only 5 odd Number
+     then Stop th loop
+
+use if,continue , counter and break
+
+expected output :
+1 3 5 7 9
+ */
+console.log("Print First 5 Odd Number");
+
+
+let counter=1;
+for(let i=1; i<=100;i++){
+    if(i%2===1){
+        console.log(i);
+        if(counter===5){
+            break;
+        }
+        counter++;
+    }
+    
+}
+console.log("Total Odd Number is ",counter);
+
 //            //! GEC(Global Execution Context)
 // debugger;
 // console.log("Start");
