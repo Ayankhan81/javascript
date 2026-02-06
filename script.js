@@ -36,6 +36,8 @@ var n12 ="10"
 console.log(n11==n12); //true (loosely comparision)
 console.log(n11===n12); //true (strictly comparision)
 
+
+
           //! VAR, LET AND CONST DIFFERENCE
 // declare
 var a;  
@@ -111,6 +113,70 @@ console.log(e);//1000 */
 // }
 
 // console.log(getGrade(100));
+
+console.log("============LOOP Practice Question======");
+
+console.log("=====Question 1======");
+
+// Print number from 1 To 10 using for loop
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+//  print number from 1 to 10 using a while loop
+
+console.log("=====ques 2====");
+
+let i1 = 1;
+while (i1 <= 10) {
+  console.log(i1);
+  i1++;
+}
+
+// Print even number from 1 to 20 using for loop
+console.log("=====quest 3====");
+
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+// Print even number from 1 to 20 using for loop
+console.log("======quest 3======");
+
+let e1 = 1;
+while (e1 <= 20) {
+  if (e1 % 2 === 0) {
+    console.log(e1);
+  }
+  e1++;
+}
+
+// Print odd number using a while loop from 1 to 15
+console.log("=======Quest 4");
+
+let o1 = 1;
+while (o1 <= 15) {
+  if (o1 % 2 === 1) {
+    console.log(o1);
+  }
+  o1++;
+}
+// Print the multiplication table of 5
+console.log("======Question 5=====");
+
+let n = 5;
+let table = 0;
+for (let i = 1; i <= 10; i++) {
+  table = n * i;
+  console.log(table);
+}
+
+// or
+console.log("======2nd Method=====");
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`5* ${i}=`, 5 * i);
+}
 
 //            //! GEC(Global Execution Context)
 // debugger;
