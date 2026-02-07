@@ -161,4 +161,52 @@ let firstNumber=[12,15,3,8,20]
 let newNum=firstNumber.find((val)=>{
     return val<10;
 })
-console.log(newNum); /
+console.log(newNum); 
+
+// ! Use some() to check if any student has scored below 35.
+
+let score=[45,60,90,13]
+
+let stdScore=score.some((val)=>{
+      return val<35;
+})
+console.log(stdScore); // true
+
+
+// ! Use every to check if all number are even.
+
+let even=[2,4,6,8,12,14,1]
+
+let allEvenNum=even.every((val)=>{
+      return val%2===0;
+})
+
+console.log(allEvenNum); //false
+
+// ! Destruncture this array to get firstName and Lastname
+
+let fullName=["Ayan","Khan"];
+let [firstName,lastName]=fullName;
+console.log(firstName); // Ayan
+console.log(lastName);  // Khan
+
+
+// !  Merge two array using spread operator
+
+let x=[1,2];
+let y=[3,4];
+
+let merge=[...x,...y];
+console.log(merge);
+
+// ! Add "India" at the start of this array using spread operator
+
+let newEle=["India",...merge]
+
+console.log(newEle);
+
+// ! Clone this Array properly(not by refernce)
+
+let p=[1,2,3]
+let cloneP=[...p];
+console.log(cloneP);
