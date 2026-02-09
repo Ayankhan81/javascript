@@ -518,6 +518,164 @@ let p1=[1,2,3]
 let cloneP=[...p1];
 console.log(cloneP);
 
+console.log("========Object==========");
+
+let bjc = {
+  Name: "ayan",
+  lastName: "Khan",
+  rollNo: 2203820100033,
+  phno: 8127700166,
+  email: "mdayankhan166@gmail.com",
+};
+
+console.log(bjc["phno"]);
+
+// ! nesting
+
+const user = {
+  name: "Ayan",
+  add: {
+    city: "Sultanpur",
+    pinCode: 227808,
+    location: {
+      lat: 23.6,
+      lng: 88.8,
+    },
+  },
+};
+console.log(user.add.location.lng);
+
+// ! Object Destructuring
+// let { lat, lng } = user.add.location;
+// console.log(lng);
+// console.log(lat);
+
+// ! loop
+
+let obj = {
+  name: "Ayankhan",
+  age: 21,
+  phno: 8127700166,
+};
+
+for (let key in obj) {
+  console.log(key, obj[key]);
+}
+
+// ! object.keys
+// ye object ki sabhi value ko array me dal deta h
+// console.log(Object.keys(obj)); // ['name', 'age', 'phno']
+
+//! object.entries
+
+// console.log(Object.entries(obj));
+
+// ! Object Copying
+// let obj1 = {
+//   name: "Ayankhan",
+//   age: 21,
+//   phno: 8127700166,
+// };
+
+// let obj2 = { ...obj1 };
+// console.log(obj2);
+
+// console.log(obj1);
+
+
+// let obje1 = {
+//   name: "Ayankhan",
+//   age: 21,
+//   phno: 8127700166,
+//   add: {
+//     city: "sultanpur",
+//   },
+// };
+
+// let obje2 = { ...obje1 };
+// obje2.add.city = "Lucknow"; // isme prblm ye hoti h ki copy to krta h lekin agr hm kuch change kare to wo previous me bhi change kr deta h
+// console.log(obje1);
+// console.log(obje2);
+
+// ! Deep cloning
+ 
+let object1 = {
+  name: "Ayankhan",
+  age: 21,
+  phno: 8127700166,
+  add: {
+    city: "sultanpur",
+  },
+};
+let object2=JSON.parse(JSON.stringify(object1));
+console.log(object1);
+console.log(object2);
+object2.add.city="Lucknow"
+
+
+// ! Optional chaining
+// ye error ko handle krne ke liye use hota h
+
+console.log(object1?.add?.city); 
+// isme ye hoga ki agr maan lo kabhi koi spelling mismatch hoti h tb bhi code run krega properly
+
+
+// ! Create an object for a student with name age and isEnrolled.
+
+let Student={
+    stdName:"Ayankhan",
+    stdAge:21,
+    isEnrolled:"true",
+};
+console.log(Student);
+
+// ! Acces the value from this object
+
+const User={
+        "first-name":"Ayan",
+};
+
+console.log(User["first-name"]);
+
+
+// Given a dynamic key let key="age", how will you acess user[key]
+
+let key="age";
+
+const User1={
+    age:21,
+};
+
+console.log(User1[key]);  //21
+
+// ! From object below print the lattitude
+
+const locat={
+    city:"Noida",
+    coordinates:{
+        lat:56.5,
+        lng:25.5,
+    },
+};
+
+let{lat,lng}=locat.coordinates
+console.log(lat);
+console.log(lng);
+
+// console.log(locat.coordinates.lat);
+
+// ! What will happen is coordinates is missing ?  how can you prevent errors?
+
+const locations={
+    city:"Noida",
+    coordinatesjhj:{
+        lat:565.5,
+        lng:25.5,
+    },
+};
+
+console.log(locations?.coordinates?.lat); //undefined
+
 
 //            //! GEC(Global Execution Context)
 // debugger;
