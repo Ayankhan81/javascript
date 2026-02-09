@@ -362,7 +362,62 @@ let newArr2=arr2.filter(function(val){
 })
 console.log(newArr2);
 
+// ! Reduce
 
+let redArr2=arr2.reduce(function(accumulator,val){
+      return accumulator+val
+},0)
+console.log(redArr2 );
+
+// ! find
+
+
+let ar=[1,2,3,4,5]
+
+let[a,b]=arr2;
+console.log(a,b);
+
+
+let arr3=[1,2,3,4,5]
+
+let arr4=[...arr3,6,7,8,9]
+console.log(arr4); //[1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(arr3); //[1, 2, 3, 4, 5]
+
+//? Practice Question
+
+//! Create an array with 3 fruit and print the second fruit.
+
+let fruit=["Grapes","Banana","Litchi"]
+console.log(fruit[1]);
+
+//! Add "Match" at the end and "Pineapple" at the starting af this array
+
+fruit.push("Mango")
+fruit.unshift("Pineapple");
+console.log(fruit);
+
+//! Replace Banana with kiwi in the array above
+let fruit1=['Pineapple', 'Grapes', 'Banana', 'Litchi', 'Mango']
+fruit1.splice(2,1,"Kiwi");
+console.log(fruit1); //['Pineapple', 'Grapes', 'Kiwi', 'Litchi', 'Mango']
+
+// ! Remove last element
+let numb=[1,2,3,4,5]
+numb.pop();
+console.log(numb); //[1, 2, 3, 4]
+
+//! Insert "Red" and "blue" at index 1 at this array
+
+let color=["Green","Yellow"];
+color.splice(1,0,"Red","Blue");
+console.log(color); //['Green', 'Red', 'Blue', 'Yellow']
+
+// ! Extract only the middle 3 element from this element
+
+let items=[1,2,3,4,5,6];
+let newItems=items.slice(1,4);
+console.log(newItems); //[2, 3, 4]
 
 //            //! GEC(Global Execution Context)
 // debugger;
