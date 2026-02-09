@@ -419,6 +419,106 @@ let items=[1,2,3,4,5,6];
 let newItems=items.slice(1,4);
 console.log(newItems); //[2, 3, 4]
 
+//! Sort This array alphabatically and then reverse it:
+
+let names=["Zara","Arjun","Mira","Bhavya"]
+// agr hm isme kuch method na bhi lagaye sirf 
+// sort hi likh de to ye wese bhi alphabatically sort kr dega
+
+names.sort();
+console.log(names); //['Arjun', 'Bhavya', 'Mira', 'Zara']
+names.reverse();
+console.log(names); //['Zara', 'Mira', 'Bhavya', 'Arjun']
+
+// names.sort().reverse(); hm aise bhi likh skte hn
+
+// ! Use map() to square each number.
+
+let square=[1,2,3,4,5]
+
+let newSq=square.map(function(val){
+  return val*val;
+})
+console.log(newSq); //[1, 4, 9, 16, 25]
+
+// ! Use filter() to keep number greater than 10
+
+let arr=[5,15,34,2,6,88,43]
+
+let newArr=arr.filter((val)=>{
+      // if(val>10) return true;
+      return val>10;
+})
+console.log(newArr); // [15, 34, 88, 43]
+
+// ! Use reduce Method to find the sum of this array.
+
+let arr1=[10,20,30]
+
+let newArr1=arr1.reduce((acc,val)=>{
+  return acc+val;
+},0)
+console.log(newArr1);  //60
+
+// ! Use find () to get the first number less than 10
+
+let firstNumber=[12,15,3,8,20]
+
+let newNum=firstNumber.find((val)=>{
+    return val<10;
+})
+console.log(newNum); // 3
+
+
+// ! Use some() to check if any student has scored below 35.
+
+let score=[45,60,90,13]
+
+let stdScore=score.some((val)=>{
+      return val<35;
+})
+console.log(stdScore); // true
+
+
+// ! Use every to check if all number are even.
+
+let even=[2,4,6,8,12,14,1]
+
+let allEvenNum=even.every((val)=>{
+      return val%2===0;
+})
+
+console.log(allEvenNum); //false
+
+// ! Destruncture this array to get firstName and Lastname
+
+let fullName=["Ayan","Khan"];
+let [firstName,lastName]=fullName;
+console.log(firstName); // Ayan
+console.log(lastName);  // Khan
+
+
+// !  Merge two array using spread operator
+
+let x=[1,2];
+let y=[3,4];
+
+let merge=[...x,...y];
+console.log(merge);
+
+// ! Add "India" at the start of this array using spread operator
+
+let newEle=["India",...merge]
+
+console.log(newEle);
+
+// ! Clone this Array properly(not by refernce)
+
+let p1=[1,2,3]
+let cloneP=[...p1];
+console.log(cloneP);
+
+
 //            //! GEC(Global Execution Context)
 // debugger;
 // console.log("Start");
