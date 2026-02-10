@@ -913,6 +913,47 @@ console.log(p);
 
 //!
 
+/* Convert this function in arrow function
+function mult(a, b){
+    return a*b;
+}
+    */
+
+let multiply = (a, b) => {
+  return a * b;
+};
+multiply(2, 4);
+
+// What does the ... operator mean in parameters?
+
+function abcd1(a, b, c, ...val) {
+  console.log(a, b, c, val);
+}
+abcd1(1, 2, 3, 4, 5, 6, 7, 4);
+
+// Use rest parameter to accept any number of scores and return the total.
+
+function getScore(...score) {
+  let total = 0;
+  score.forEach(function (val) {
+    total += val;
+  });
+  return total;
+}
+console.log(getScore(10, 20, 30, 40, 50));
+
+// return kro too young agr 18 se kam h to aur agr jada h to return kro allowed
+
+function checkAge(age) {
+  if (age < 18) return "Too Young";
+  return "Allowed";
+}
+console.log(checkAge(18));
+
+function f() {
+  return;
+}
+console.log(f()); //undefined
 // //! 1. Object literals
 // const obj1={
 //     id:1,
