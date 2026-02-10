@@ -1015,6 +1015,37 @@ console.log(bmi(48,1.8).toFixed(2));
 // console.log(ten(78));
 // console.log(twenty(200));
 
+function counter(){
+    let count=0;
+    return function(){
+        count++;
+        return count;
+    }
+}
+
+let c=counter();
+console.log(c()); // count ki 1 hogi
+console.log(c()); // count ki 2 hogi
+
+
+//  Create a pure function to transform a value
+
+function doubleValue(val){
+    return val * 2;
+}
+
+let value=doubleValue(5)
+console.log("Doubled Value is :",value);
+
+//  Use IIFE to isolate variables
+
+(function(){
+    const pass="secret Password"
+    console.log(pass);
+    
+})();
+
+
 
 
 
