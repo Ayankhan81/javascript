@@ -954,6 +954,70 @@ function f() {
   return;
 }
 console.log(f()); //undefined
+
+// Can u Assign a function to a variable and then call it. show How ?
+
+let a1 = function () {
+  console.log("Ayankhan");
+};
+a1();
+
+// Pass A function into another function and execute it inside.
+
+function hj23(val) {
+    val();
+}
+hj23(function() {
+  console.log("This is other function");
+});
+
+
+//  Convert This impure function into pure function
+
+let total=0;
+function addToTotal(num){
+    let newTotal=total;
+    total+=num;
+}
+
+/* Convert this normal function in IIFE
+    function init(){
+        console.log("Initialized");
+    
+}
+    */
+
+(function init(){
+    console.log("Initialized");
+    
+})();
+
+// !  Practice Question
+
+// Write a BMI Calculator
+
+function bmi(weight,height){
+   return  weight/(height*height);
+}
+console.log(bmi(48,1.8).toFixed(2));
+
+
+// Create a Resualbe discount calculator
+
+// function discountCalculator(discount){
+//     return function(price){
+//         return price-price*(discount/100)
+//     };
+// }
+
+// let ten=discountCalculator(10);
+// let twenty=discountCalculator(20);
+// console.log(ten(78));
+// console.log(twenty(200));
+
+
+
+
 // //! 1. Object literals
 // const obj1={
 //     id:1,
