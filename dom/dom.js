@@ -218,3 +218,75 @@ x.classList.remove("headingTag")
 // ! toggle // agr class hogi to hta dega agr nhi hogi to lga dega
 
 x.classList.toggle("toglleClassName")
+// ! Practice Question
+
+// T1: Select the heading of the page by ID and changes it's text to "WELCOME TO SHERYIANS !"
+
+let t1=document.getElementById("heading")
+t1.textContent="WELOCME TO SHERYIANS !"
+
+// T2: Select all <li> element and print thier text using a loop
+
+let t2=document.querySelectorAll("li")
+t2.forEach(function(val){
+    console.log(val.textContent);
+    
+})
+
+// T3: Select a paragraph and replace its content with:
+// <b>Updated<b/> by js
+
+let t3=document.querySelector("p")
+t3.innerHTML="<b>Updated</b>  by JAVAScript"
+
+// T4: select a link and update its href to point https://sheryians.com
+
+let t4=document.querySelector("a")
+t4.href="sheryians.com"
+t4.setAttribute("href","sheryians.com")
+
+// T5: Add a tittle attribute to a div dynamically
+let t5=document.querySelector("div")
+t5.setAttribute("title","Some Information")
+
+// T6: Remove the disabled attribute from button
+let t6=document.querySelector("button")
+t6.removeAttribute("disabled")
+
+// T7: Create a new list item <li>New Tasks</li> and add it to the end of a <ul>
+
+let t7=document.querySelector("ul")
+let Newli=document.createElement("li")
+Newli.textContent="New Tasks"
+
+document.querySelector("ul").appendChild(Newli)
+// t7.appendChild(Newli)
+
+// T8 :Create a new img element with placeholder source and add it at the top of the div
+let t8=document.createElement("img")
+t8.setAttribute("src","../../assests/sectionb4-toys.jpg")
+
+document.querySelector("div").prepend(t8);
+
+
+// T9:Select the first element in list and delete it from thr Dom
+
+let ul=document.querySelector("ul")
+let t9=document.querySelector("li")
+ul.removeChild(t9);
+
+// T10: Add a highlight class to every even item in a lists
+
+let t10=document.querySelectorAll("ul li:nth-child(2n)")
+
+t10.forEach(function(elem){
+    elem.classList.add("highlight")
+})
+
+// T11: Set the font size of <P></P> element to 18px using .style
+
+let t12=document.querySelectorAll("#para")
+t12.forEach(function(elem){
+    elem.style.fontSize="18px"
+});
+
