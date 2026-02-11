@@ -145,3 +145,41 @@ tableTag.append(trTag1,trTag2,trTag3)
 console.log(tableTag);
 
 mainContainer.append(tableTag)
+
+console.log("====DOM====");
+
+let a=document.getElementById("h1Tag")
+console.dir(a);
+let b=document.getElementsByClassName("heading1")
+console.log(b);
+
+let c=document.querySelector("h2")
+console.dir(c);
+
+
+let d=document.querySelector(".heading1")
+d.textContent="Hello, Ayan"
+d.innerHTML="Hello, Ayan How Are You"  // ye h2 ke html ke andr changes kr dega 
+d.innerText="What are You learning";
+
+let h3=document.querySelector("h3")
+h3.innerHTML="<i>iconTag</>"
+console.dir(h3);
+h3.hidden=true;
+
+let e=document.querySelector("a")
+console.dir(e);
+e.href="https://www.google.com"
+
+e.setAttribute("href","https://www.instagram.com")
+
+console.log(e);
+
+let f=document.querySelector("img")
+f.setAttribute("src","../../assests/sectionb4-toys.jpg")
+
+ let i=document.querySelector("a")
+console.dir( i.getAttribute("href"));
+
+let j=document.querySelector("a")
+j.removeAttribute("href")
