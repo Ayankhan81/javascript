@@ -183,3 +183,38 @@ console.dir( i.getAttribute("href"));
 
 let j=document.querySelector("a")
 j.removeAttribute("href")
+
+// ! Dynamic Dom Manipulation
+
+// ! Create Element
+append/prepend karo jaha bhi element chahiye wah append body ke starting me add krega element ko aur prepend body ke end add karega element ko
+
+
+let h1=document.createElement("h1")
+h1.textContent="Hii, Ayan Khan"
+document.body.append(h1); // ek tarika ye h
+document.querySelector("body").append(h1); // dusra tarika ye h
+
+let divTag=document.createElement("h1")
+divTag.textContent="Hey, I'm H1 Tag"
+document.querySelector("div").append(divTag)
+
+
+// Style update
+
+
+let h11=document.querySelector("h1")
+h11.style.color="red"
+h11.style.background="yellow"
+
+let x=document.querySelector("h2")
+// ! For adding class
+
+x.classList.add("headingTag")
+
+// ! For Removing Class
+x.classList.remove("headingTag")
+
+// ! toggle // agr class hogi to hta dega agr nhi hogi to lga dega
+
+x.classList.toggle("toglleClassName")
