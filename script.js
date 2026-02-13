@@ -1126,6 +1126,34 @@ console.log("Doubled Value is :",value);
 // delete obj.salary
 // console.log(obj);
 
+console.log("========Object==========");
+
+let bjc = {
+  Name: "ayan",
+  lastName: "Khan",
+  rollNo: 2203820100033,
+  phno: 8127700166,
+  email: "mdayankhan166@gmail.com",
+};
+
+console.log(bjc["phno"]);
+
+// ! nesting
+
+const user = {
+  name: "Ayan",
+  add: {
+    city: "Sultanpur",
+    pinCode: 227808,
+    location: {
+      lat: 23.6,
+      lng: 88.8,
+    },
+  },
+};
+console.log(user.add.location.lng);
+
+
 // //! object method
 
 // let obj = {
