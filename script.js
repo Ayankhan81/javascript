@@ -1153,6 +1153,17 @@ const user = {
 };
 console.log(user.add.location.lng);
 
+// ! loop
+
+let obj = {
+  name: "Ayankhan",
+  age: 21,
+  phno: 8127700166,
+};
+
+for (let key in obj) {
+  console.log(key, obj[key]);
+}
 
 // //! object method
 
