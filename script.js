@@ -1288,60 +1288,60 @@ for (let key in obj) {
 
 // console.log(locations?.coordinates?.lat); //undefined
 
-/ ! Destructure the "first-name" as a variable called firstName
+// // ! Destructure the "first-name" as a variable called firstName
 
-const user1={
-    "first-name":"Ayan",
-};
+// const user1={
+//     "first-name":"Ayan",
+// };
 
-let{"first-name": firstName}=user1
-console.log(firstName);
+// let{"first-name": firstName}=user1
+// console.log(firstName);
 
-// ! Use for-in to log all keys in this object
+// // ! Use for-in to log all keys in this object
 
-const course={
-    title:"JavaScript",
-    duration:"4 Weaks",
-};
+// const course={
+//     title:"JavaScript",
+//     duration:"4 Weaks",
+// };
 
-for(let key in course){
-        console.log(key,course[key]);
+// for(let key in course){
+//         console.log(key,course[key]);
         
-}
+// }
 
-// ! Use Object.entries() to print all key-value pairs as :
-// tittle: JavaScript
-// duration:4 weaks
+// // ! Use Object.entries() to print all key-value pairs as :
+// // tittle: JavaScript
+// // duration:4 weaks
 
-const course1={
-    title:"JavaScript",
-    duration:"4 weeks",
-};
+// const course1={
+//     title:"JavaScript",
+//     duration:"4 weeks",
+// };
 
-Object.entries(course1).forEach(function(val){
-    console.log(val[0] + ":" +val[1]);
+// Object.entries(course1).forEach(function(val){
+//     console.log(val[0] + ":" +val[1]);
     
-})
+// })
 
-// ! Copy this object using spread operator
+// // ! Copy this object using spread operator
 
-const original={a:1,b:2};
+// const original={a:1,b:2};
 
-const originalCopy={...original}
-console.log(originalCopy);
+// const originalCopy={...original}
+// console.log(originalCopy);
 
-// ! Question
+// // ! Question
 
-const objec1={info:{score:80}};
-// const clone={...objec1};
-// clone.info.score=100;
-// console.log(clone.info.score);
+// const objec1={info:{score:80}};
+// // const clone={...objec1};
+// // clone.info.score=100;
+// // console.log(clone.info.score);
 
-// ! Deep clone objec1 safely
+// // ! Deep clone objec1 safely
 
-let objec2=JSON.parse(JSON.stringify(objec1));
-console.log(objec2);
-console.log(objec1);
+// let objec2=JSON.parse(JSON.stringify(objec1));
+// console.log(objec2);
+// console.log(objec1);
 
 // destructuring
 
