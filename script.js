@@ -1250,6 +1250,44 @@ object2.add.city="Lucknow"
 
 console.log(object1?.add?.city); 
 // isme ye hoga ki agr maan lo kabhi koi spelling mismatch hoti h tb bhi code run krega properly
+// Given a dynamic key let key="age", how will you acess user[key]
+
+let key="age";
+
+const User1={
+    age:21,
+};
+
+console.log(User1[key]);  //21
+
+// ! From object below print the lattitude
+
+const locat={
+    city:"Noida",
+    coordinates:{
+        lat:56.5,
+        lng:25.5,
+    },
+};
+
+let{lat,lng}=locat.coordinates
+console.log(lat);
+console.log(lng);
+
+// console.log(locat.coordinates.lat);
+
+// ! What will happen is coordinates is missing ?  how can you prevent errors?
+
+const locations={
+    city:"Noida",
+    coordinatesjhj:{
+        lat:565.5,
+        lng:25.5,
+    },
+};
+
+console.log(locations?.coordinates?.lat); //undefined
+
 
 // destructuring
 
