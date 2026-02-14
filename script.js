@@ -1128,7 +1128,7 @@ console.log("Doubled Value is :",value);
 
 console.log("========Object==========");
 
-let bjc = {
+let bjdc = {
   Name: "ayan",
   lastName: "Khan",
   rollNo: 2203820100033,
@@ -1136,7 +1136,7 @@ let bjc = {
   email: "mdayankhan166@gmail.com",
 };
 
-console.log(bjc["phno"]);
+console.log(bjdc["phno"]);
 
 // ! nesting
 
@@ -1228,6 +1228,28 @@ for (let key in obj) {
 //   },
 // };
 // id,firstname,coding,city,id,course
+
+// ! Deep cloning
+ 
+let object1 = {
+  name: "Ayankhan",
+  age: 21,
+  phno: 8127700166,
+  add: {
+    city: "sultanpur",
+  },
+};
+let object2=JSON.parse(JSON.stringify(object1));
+console.log(object1);
+console.log(object2);
+object2.add.city="Lucknow"
+
+
+// ! Optional chaining
+// ye error ko handle krne ke liye use hota h
+
+console.log(object1?.add?.city); 
+// isme ye hoga ki agr maan lo kabhi koi spelling mismatch hoti h tb bhi code run krega properly
 
 // destructuring
 
