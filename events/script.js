@@ -42,5 +42,36 @@ sel.addEventListener("change", function (dets) {
   device.textContent = `${dets.target.value} is Selected`;
 });
 
+let h2=document.querySelector("#headh2")
+let a=document.querySelector("#main")
+window.addEventListener("keydown",function(dets){
+    if(dets.key===" "){
+        h2.textContent="Space"
+    }
+    else{
+        h2.textContent=dets.key;
+    }
+    
+})
 
+
+let btn=document.querySelector("#btn")
+let choosefile=document.querySelector("#fileinput")
+btn.addEventListener("click",function(){
+        choosefile.click();
+        
+})
+
+// choosefile.addEventListener("change",function(dets){
+//            btn.textContent=dets.target.files[0].name;   
+// })
+
+// ise hm ek aur tarike se kr skte hn
+// isse hoga ye ki agr hm cancel kr denge file pe click krne ke baad to error nhi aayega wrna error aa jyega
+choosefile.addEventListener("change",function(dets){
+    const file=dets.target.files[0];
+    if(file){
+        btn.textContent=file.name
+    }
+})
 
