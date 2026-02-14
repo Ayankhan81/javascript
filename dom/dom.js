@@ -289,4 +289,3 @@ let t12=document.querySelectorAll("#para")
 t12.forEach(function(elem){
     elem.style.fontSize="18px"
 });
-
