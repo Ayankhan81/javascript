@@ -1231,62 +1231,62 @@ for (let key in obj) {
 
 // ! Deep cloning
  
-let object1 = {
-  name: "Ayankhan",
-  age: 21,
-  phno: 8127700166,
-  add: {
-    city: "sultanpur",
-  },
-};
-let object2=JSON.parse(JSON.stringify(object1));
-console.log(object1);
-console.log(object2);
-object2.add.city="Lucknow"
+// let object1 = {
+//   name: "Ayankhan",
+//   age: 21,
+//   phno: 8127700166,
+//   add: {
+//     city: "sultanpur",
+//   },
+// };
+// let object2=JSON.parse(JSON.stringify(object1));
+// console.log(object1);
+// console.log(object2);
+// object2.add.city="Lucknow"
 
 
-// ! Optional chaining
-// ye error ko handle krne ke liye use hota h
+// // ! Optional chaining
+// // ye error ko handle krne ke liye use hota h
 
-console.log(object1?.add?.city); 
-// isme ye hoga ki agr maan lo kabhi koi spelling mismatch hoti h tb bhi code run krega properly
-// Given a dynamic key let key="age", how will you acess user[key]
+// console.log(object1?.add?.city); 
+// // isme ye hoga ki agr maan lo kabhi koi spelling mismatch hoti h tb bhi code run krega properly
+// // Given a dynamic key let key="age", how will you acess user[key]
 
-let key="age";
+// let key="age";
 
-const User1={
-    age:21,
-};
+// const User1={
+//     age:21,
+// };
 
-console.log(User1[key]);  //21
+// console.log(User1[key]);  //21
 
-// ! From object below print the lattitude
+// // ! From object below print the lattitude
 
-const locat={
-    city:"Noida",
-    coordinates:{
-        lat:56.5,
-        lng:25.5,
-    },
-};
+// const locat={
+//     city:"Noida",
+//     coordinates:{
+//         lat:56.5,
+//         lng:25.5,
+//     },
+// };
 
-let{lat,lng}=locat.coordinates
-console.log(lat);
-console.log(lng);
+// let{lat,lng}=locat.coordinates
+// console.log(lat);
+// console.log(lng);
 
-// console.log(locat.coordinates.lat);
+// // console.log(locat.coordinates.lat);
 
-// ! What will happen is coordinates is missing ?  how can you prevent errors?
+// // ! What will happen is coordinates is missing ?  how can you prevent errors?
 
-const locations={
-    city:"Noida",
-    coordinatesjhj:{
-        lat:565.5,
-        lng:25.5,
-    },
-};
+// const locations={
+//     city:"Noida",
+//     coordinatesjhj:{
+//         lat:565.5,
+//         lng:25.5,
+//     },
+// };
 
-console.log(locations?.coordinates?.lat); //undefined
+// console.log(locations?.coordinates?.lat); //undefined
 
 
 // destructuring
