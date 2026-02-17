@@ -2,20 +2,19 @@ console.log("=======Events=========");
 
 let head1 = document.querySelector("h1");
 
-// ! single click pe changes 
+// ! single click pe changes
 
 function singleClick() {
   head1.style.color = "red";
 }
 head1.addEventListener("click", singleClick);
 
-// ! doubleclick pe changes 
+// ! doubleclick pe changes
 
 function doubleClick() {
   head1.style.color = "green";
 }
 head1.addEventListener("dblclick", doubleClick);
-
 
 // ! input me change aur use cosole pe print karana
 
@@ -42,36 +41,45 @@ sel.addEventListener("change", function (dets) {
   device.textContent = `${dets.target.value} is Selected`;
 });
 
-let h2=document.querySelector("#headh2")
-let a=document.querySelector("#main")
-window.addEventListener("keydown",function(dets){
-    if(dets.key===" "){
-        h2.textContent="Space"
-    }
-    else{
-        h2.textContent=dets.key;
-    }
-    
-})
+let h2 = document.querySelector("#headh2");
+let a = document.querySelector("#main");
+window.addEventListener("keydown", function (dets) {
+  if (dets.key === " ") {
+    h2.textContent = "Space";
+  } else {
+    h2.textContent = dets.key;
+  }
+});
 
-
-let btn=document.querySelector("#btn")
-let choosefile=document.querySelector("#fileinput")
-btn.addEventListener("click",function(){
-        choosefile.click();
-        
-})
+let btn = document.querySelector("#btn");
+let choosefile = document.querySelector("#fileinput");
+btn.addEventListener("click", function () {
+  choosefile.click();
+});
 
 // choosefile.addEventListener("change",function(dets){
-//            btn.textContent=dets.target.files[0].name;   
+//            btn.textContent=dets.target.files[0].name;
 // })
 
 // ise hm ek aur tarike se kr skte hn
 // isse hoga ye ki agr hm cancel kr denge file pe click krne ke baad to error nhi aayega wrna error aa jyega
-choosefile.addEventListener("change",function(dets){
-    const file=dets.target.files[0];
-    if(file){
-        btn.textContent=file.name
-    }
-})
+choosefile.addEventListener("change", function (dets) {
+  const file = dets.target.files[0];
+  if (file) {
+    btn.textContent = file.name;
+  }
+});
 
+let form = document.querySelector("form");
+let inputs = document.querySelectorAll(".detail");
+
+form.addEventListener("submit", function (dets) {
+  dets.preventDefault();
+
+  console.log(
+    inputs[0].value,
+    inputs[1].value,
+    inputs[2].value,
+    inputs[3].value,
+  );
+});
