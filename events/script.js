@@ -72,14 +72,45 @@ choosefile.addEventListener("change", function (dets) {
 
 let form = document.querySelector("form");
 let inputs = document.querySelectorAll(".detail");
+let mainform = document.querySelector(".mainForm")
+
 
 form.addEventListener("submit", function (dets) {
   dets.preventDefault();
 
-  console.log(
-    inputs[0].value,
-    inputs[1].value,
-    inputs[2].value,
-    inputs[3].value,
-  );
+  let card=document.createElement("div")
+  card.classList.add("card")
+
+  let profile=document.createElement("div")
+  profile.classList.add("profile")
+
+  card.appendChild(profile);
+
+  let image=document.createElement("img")
+  image.setAttribute("src",inputs[0].value)
+  profile.appendChild(image)
+
+  let heading=document.createElement("h3")
+  card.appendChild(heading)
+  heading.textContent=inputs[1].value
+
+  let heading5=document.createElement("h5")
+  card.appendChild(heading5)
+  heading5.textContent=inputs[2].value
+
+
+  let para=document.createElement("p")
+  card.appendChild(para);
+  para.textContent=inputs[3].value
+
+  mainform.appendChild(card)
+  
+
+  inputs.forEach(function(inp){
+     if( inp.type !=="submit"){
+       inp.value="";
+     }
+  })
+ 
 });
+
