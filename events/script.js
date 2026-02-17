@@ -116,16 +116,29 @@ form.addEventListener("submit", function (dets) {
 
 // ! MouseOver & MouseMove
 
-let abc=document.querySelector("#abc")
-abc.addEventListener("mouseover",function(){
-  abc.style.backgroundColor="yellow"
-})
-abc.addEventListener("mouseout",function(){
-  abc.style.backgroundColor="red"
-})
+// let abc=document.querySelector("#abc")
+// abc.addEventListener("mouseover",function(){
+//   abc.style.backgroundColor="yellow"
+// })
+// abc.addEventListener("mouseout",function(){
+//   abc.style.backgroundColor="red"
+// })
 
-window.addEventListener("mousemove",function(dets){
-   abc.style.top=dets.clientY + "px"
-   abc.style.left=dets.clientX + "px"
+// window.addEventListener("mousemove",function(dets){
+//    abc.style.top=dets.clientY + "px"
+//    abc.style.left=dets.clientX + "px"
   
+// })
+
+
+// let lists=document.querySelector("ul")
+// lists.addEventListener("click",function(dets){
+// dets.target.style.textDecoration="line-through"
+// })
+
+// is ka ek method aur h
+
+let list =document.querySelector("ul")
+list.addEventListener("click",function(dets){
+      dets.target.classList.toggle("lt")
 })

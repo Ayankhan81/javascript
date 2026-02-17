@@ -72,18 +72,46 @@
       border-radius: 50%;
       overflow: hidden;
     }
-    .profile img{
+    .profile img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
     /* ! MouseOver & MouseMove */
-    #abc{
+    #abc {
       position: absolute;
       transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
       width: 400px;
       height: 400px;
       background-color: red;
+    }
+
+    /* ! New div */
+
+    #newDiv{
+      height: 100%;
+      width: 100%;
+      background-color: #222;
+    }
+    #nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 100px;
+      background-color: #444;
+    }
+    a{
+      color: white;
+    }
+    button{
+      padding: 12px 22px;
+      border-radius: 5px;
+      background-color: red;
+    }
+
+    .lt{
+      text-decoration: line-through;
     }
   </style>
   <body>
@@ -112,13 +140,13 @@
     </div>
 
     <div class="mainForm">
-            <form id="userForm">
-              <input type="text" placeholder="profile-pic" class="detail" /> <br />
-            <input type="text" placeholder="name" class="detail" /> <br />
-            <input type="text" placeholder="hobby" class="detail" /> <br />
-            <input type="text" placeholder="info" class="detail" /> <br />
-            <input type="submit" id="subBtn" class="detail" />
-          </form>
+      <form id="userForm">
+        <input type="text" placeholder="profile-pic" class="detail" /> <br />
+        <input type="text" placeholder="name" class="detail" /> <br />
+        <input type="text" placeholder="hobby" class="detail" /> <br />
+        <input type="text" placeholder="info" class="detail" /> <br />
+        <input type="submit" id="subBtn" class="detail" />
+      </form>
     </div>
 
     <!-- <div class="card">
@@ -133,20 +161,24 @@
       </p>
     </div> -->
 
-
     <!-- !MouseOver & MouseMove -->
-     <div id="abc">
+    <!-- <div id="abc"></div> -->
 
-     </div>
-
-
-
-
-
-
-
+    <!-- <div id="newDiv">
+      <div id="nav">
+        <a href="">Home</a><a href="">About</a>
+        <button>click and Follow</button>
+      </div>
+    </div> -->
 
 
+    <ul>
+      <li>Aplle</li>
+      <li>Guava</li>
+      <li>Grapes</li>
+      <li>Banana</li>
+      <li>Mango</li>
+    </ul>
     <script src="./script.js"></script>
   </body>
 </html>
