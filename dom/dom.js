@@ -36,37 +36,37 @@ let pureArray=Array.from(h3Tag);
 console.log(pureArray);
 
 ! document.getElementsByTagName();
-// console.log("======getElementBytagName========");
+console.log("======getElementBytagName========");
 
-// let tagCollection=document.getElementsByTagName("h3")
-// console.log(tagCollection);
+let tagCollection=document.getElementsByTagName("h3")
+console.log(tagCollection);
 
-// let pureTagColleection=Array.isArray(tagCollection)
-// console.log(pureTagColleection);
+let pureTagColleection=Array.isArray(tagCollection)
+console.log(pureTagColleection);
 
-// //! document.querySelector(id, class , tagName)
-// console.log("======qerrySelector()========");
+! document.querySelector(id, class , tagName)
+console.log("======qerrySelector()========");
 
-// let elem1=document.querySelector("#head2")
-// console.log(elem1);
+let elem1=document.querySelector("#head2")
+console.log(elem1);
 
-// let elem2=document.querySelector(".head3");
-// console.log(elem2);
+let elem2=document.querySelector(".head3");
+console.log(elem2);
 
-// let elem3=document.querySelector("h1")
-// console.log(elem3);
+let elem3=document.querySelector("h1")
+console.log(elem3);
 
-// let ele4=document.querySelector("h3, .head3, #head2")
-// console.log(ele4);
+let ele4=document.querySelector("h3, .head3, #head2")
+console.log(ele4);
 
-// ! document.querySelectorAll()
-// let ele5 = document.querySelectorAll(".head3");
-// console.log(ele5);
+! document.querySelectorAll()
+let ele5 = document.querySelectorAll(".head3");
+console.log(ele5);
 
 // Whenever we use getElementByClassName or tagName we get HTML collection
 // Whenever we use querrySelectorAll we get NodeList
 
-// ! Difference between HTML collection and NodeList
+//! Difference between HTML collection and NodeList
 
 /*
 Cannot use anyy of the array method in HTML Collection
@@ -81,21 +81,21 @@ Node List is Called Static Collection
 
 //! Example of sttaic and live collection
 
-// const collection=document.getElementsByTagName("div")
-// const list=document.querySelectorAll("div")
+const collection=document.getElementsByTagName("div")
+const list=document.querySelectorAll("div")
 
-// console.log("HTML collection ==",collection.length); // 3
-// console.log("NodeList ==",list.length); // 3
+console.log("HTML collection ==",collection.length); // 3
+console.log("NodeList ==",list.length); // 3
 
 // ! Creating HTML dynamicallly
-// for(let i=0;i<5;i++){
-// const divTag=document.createElement("div")
-// divTag.textContent="Div-4"
-// console.log(divTag);
-// document.body.appendChild(divTag)
-// }
-// console.log("HTML collection ==",collection.length); // 4 (live)
-// console.log("NodeList ==",list.length);  // 3 (static)
+for(let i=0;i<5;i++){
+const divTag=document.createElement("div")
+divTag.textContent="Div-4"
+console.log(divTag);
+document.body.appendChild(divTag)
+}
+console.log("HTML collection ==",collection.length); // 4 (live)
+console.log("NodeList ==",list.length);  // 3 (static)
 
 
 //! DOM Manipulation
