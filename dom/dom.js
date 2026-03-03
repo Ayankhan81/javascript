@@ -4,38 +4,38 @@ console.log("========DOM============");
 
 // /* used to target HTML element in js
 
-// document.getElementById(); Returns the first element within node's descendants whose ID is elementId.Else returns null
-// document.getElementsByClassName();
-// document.getElementsByTagName();
-// document.querySelector();
-// document.querySelectorAll();
-// */
-// // ! document.getElementById();
-// console.log("======getElementByID========");
+document.getElementById(); //Returns the first element within node's descendants whose ID is elementId.Else returns null
+document.getElementsByClassName();
+document.getElementsByTagName();
+document.querySelector();
+document.querySelectorAll();
 
-// let h2Tag=document.getElementById("head2");
-// console.log(h2Tag);
+! document.getElementById();
+console.log("======getElementByID========");
 
-// console.log(h2Tag.textContent);
-// console.log(h2Tag.innerHTML);
+let h2Tag=document.getElementById("head2");
+console.log(h2Tag);
 
-// //! document.getElementsByClassName();
-// console.log("======getElementByclassName========");
+console.log(h2Tag.textContent);
+console.log(h2Tag.innerHTML);
 
-// let h3Tag=document.getElementsByClassName("head3")
-// console.log(h3Tag); //HTMLCollection(3) [h3.head3, h3.head3, h3.head3]
+! document.getElementsByClassName();
+console.log("======getElementByclassName========");
 
-// console.log(h3Tag[1].textContent);
-// // if we want to check array is pure or not
-// //  it is check by Array.isarray()  return boolean
+let h3Tag=document.getElementsByClassName("head3")
+console.log(h3Tag); //HTMLCollection(3) [h3.head3, h3.head3, h3.head3]
 
-// console.log(Array.isArray(h3Tag)); //false
+console.log(h3Tag[1].textContent);
+// if we want to check array is pure or not
+//  it is check by Array.isarray()  return boolean
 
-// // conver impure array to pure array->Array,from() returns pure array
-// let pureArray=Array.from(h3Tag);
-// console.log(pureArray);
+console.log(Array.isArray(h3Tag)); //false
 
-// //! document.getElementsByTagName();
+// conver impure array to pure array->Array,from() returns pure array
+let pureArray=Array.from(h3Tag);
+console.log(pureArray);
+
+! document.getElementsByTagName();
 // console.log("======getElementBytagName========");
 
 // let tagCollection=document.getElementsByTagName("h3")
